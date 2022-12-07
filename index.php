@@ -41,10 +41,22 @@
     return $filteredBooks;
   }
 
+  function filterReleaseYear($books, $releaseYear)
+  {
+    $filteredBooks = [];
+
+    foreach ($books as $book) {
+      if ($book['releaseYear'] > $releaseYear) {
+        $filteredBooks[] = $book;
+      }
+    }
+    return $filteredBooks;
+  }
+
   ?>
 
   <ul>
-    <?php foreach (filterByAuthor($books, 'Philip K. Dick') as $book) : ?>
+    <?php foreach (filterReleaseYear($books, 2000) as $book) : ?>
       <li>
         <a href="<?= $book['purchaseUrl'] ?>">
           <?= $book['name'] ?> (<?= $book['releaseYear'] ?>)- By <?= $book['author'] ?>
