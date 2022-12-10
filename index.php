@@ -33,7 +33,7 @@
 
 
   $filteredBooks = array_filter($books, function ($book) {
-    return $book['author'] === 'Philip K. Dick';
+    return $book['releaseYear'] > 1950 && $book['releaseYear'] < 2020;
   });
 
   ?>
