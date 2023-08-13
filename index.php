@@ -3,20 +3,31 @@
 require "functions.php";
 // require "router.php";
 
-class Person
-{
-    public $name;
-    public $age;
+$dsn = "mysql:host=localhost;port=3306;dbname=myapp;user=root;charset=utf8mb4";
+$pdo = new PDO($dsn);
+$statment = $pdo->prepare("select * from posts");
+$statment->execute();
+$posts = $statment->fetchAll(PDO::FETCH_ASSOC);
 
-    public function breathe()
-    {
-        echo $this->name . " is breathing";
-    }
+foreach ($posts as $post) {
+    echo "<li>" . $post['title'] . "</li>";
 }
 
-$person = new Person();
+// dd($posts);
+// class Person
+// {
+//     public $name;
+//     public $age;
 
-$person->name = 'John Doe';
-$person->age = 25;
+//     public function breathe()
+//     {
+//         echo $this->name . " is breathing";
+//     }
+// }
 
-dd($person->breathe());
+// $person = new Person();
+
+// $person->name = 'John Doe';
+// $person->age = 25;
+
+// dd($person->breathe());
