@@ -1,4 +1,5 @@
 <?php
+
 return $config = [
     'database' => [
         'host' => 'localhost',

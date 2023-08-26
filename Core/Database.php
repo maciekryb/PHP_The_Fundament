@@ -1,6 +1,6 @@
 <?php
 
-class Databse
+class Database
 {
     public $connection;
     public $statment;
