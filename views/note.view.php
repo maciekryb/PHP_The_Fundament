@@ -12,4 +12,4 @@
         </p>
     </div>
 </main>
-<?php require('footer/nav.php') ?>
+<?php require('partials/footer.php') ?>
