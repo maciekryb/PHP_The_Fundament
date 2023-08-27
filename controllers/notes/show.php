@@ -1,7 +1,9 @@
 <?php
 
+use Core\Database;
+
 $config = require base_path('config.php');
-$db = new Databse($config['database']);
+$db = new Database($config['database']);
 
 $currentUserId = '1';
 

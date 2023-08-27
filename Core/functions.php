@@ -1,5 +1,9 @@
 <?php
 
+use Core\Response;
+
+use function Core\abort;
+
 function dd($value)
 {
     echo '<pre>';

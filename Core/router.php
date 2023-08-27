@@ -1,4 +1,7 @@
 <?php
+
+namespace Core;
+
 $routes = require base_path('routes.php');
 
 function routeToController($uri, $routes)
