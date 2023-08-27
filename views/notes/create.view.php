@@ -34,4 +34,4 @@
     </div>
 </main>
 
-<?php require base_path('views/footer/nav.php') ?>
+<?php require base_path('views/partials/footer.php') ?>
