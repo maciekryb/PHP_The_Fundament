@@ -7,12 +7,12 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 $form = new LoginForm();
-$form->validate($email, $password);
+// $form->validate($email, $password);
 
-if (!$form->validate($email, $password)) {
+if ($form->validate($email, $password)) {
 
     if ((new Authenticator)->attempt($email, $password)) {
-        redirect('location:/');
+        redirect('/');
     }
     $form->error('email', 'No matching account found for that email adress and password');
 }
