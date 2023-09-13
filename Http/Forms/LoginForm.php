@@ -12,6 +12,7 @@ class LoginForm
 
     public function __construct($attributes)
     {
+        $this->attributes = $attributes;
         if (!Validator::email($attributes['email'])) {
             $this->errors['email'] = 'Please provide a valid email address.';
         }
