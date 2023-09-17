@@ -1,0 +1,16 @@
+{
+  "name": "maciek/demo",
+  "authors": [
+    {
+      "name": "Maciej Rybak",
+      "email": "maciek.rybak95@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Core\\": "Core/",
+      "Http\\": "Http/"
+    }
+  }
+}
